@@ -260,7 +260,8 @@
 			transition: color 0.5s ease;
 		}
 		#logo{
-			margin-left: -40px;
+			position: absolute;
+			left: 40px;
 		}
 		
 		#logo img {
@@ -840,21 +841,34 @@
 		}
 		
 		.nyelv-valaszto {
-			position: relative;
-			width: 44px;
-		}
-
-		.nyelv-aktiv {
-			display: flex;
-			align-items: center;
+			position: absolute;
+			width: fit-content;
+			right: 40px;
+			border: 1px solid gray;
+			border-radius: 25%;
+			padding: 10px 20px;
+			font-size: 0.7rem;
+			transition: transform 0.4s ease-in-out;
 			cursor: pointer;
 		}
+		.nyelv-valaszto a{
+			text-decoration: none;
+			color: gray;
+		}
+		.nyelv-valaszto:hover {
+			color: black;
+			border: 2px solid black;
+		}
+		.nyelv-valaszto:hover a {
+			color: black;
+		}
 
-		.nyelv-aktiv img {
-			width: 28px;
-			height: auto;
-			display: block;
-			background-color: transparent;
+		#side_Nyelv{
+			color: #f2f2f2;
+			border: 1px solid #f2f2f2;
+			border-radius: 25%;
+			padding: 5px 20px;
+			width: fit-content;
 		}
 
 		.arrow {
@@ -908,6 +922,121 @@
 		.nyelv-valaszto img{
 			border-radius: 45%;
 		}
+		
+		
+		#side_menu{
+			display: none;
+			
+		}
+
+		.sideMenu_tartomany{
+			display: block;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+			border: none;
+			transition: max-height 0.35s ease, opacity 0.28s ease;
+		}
+		
+		#side_menu a{
+				text-decoration: none;
+				color: #f2f2f2;
+		}
+			
+		.sideMenu_tartomany.sideMenu_tartomany_open{
+			max-height: 500px;
+			opacity: 1;
+		}
+		
+		.side_menupont.side_menupont_open {
+			color: #bfa27a;
+		}
+
+		#bttn_sideMenu{
+			display: none;
+		}
+		
+		#bttn_sideMenu{
+		  align-items: center;
+		  justify-content: center;
+		  user-select: none;
+		  -webkit-tap-highlight-color: transparent;
+		}
+
+		/* kicsit nagyobb, négyzetes ikon: szebb X */
+		#bttn_sideMenu .hamburgerIcon{
+		  width: 20px;
+		  height: 20px;
+		  position: relative;
+		  display: inline-block;
+		}
+
+		/* élesebb vonalak: kisebb radius + 3d transform */
+		#bttn_sideMenu .line{
+		  position: absolute;
+		  left: 0;
+		  right: 0;
+		  height: 2px;
+		  background: #f2f2f2;
+		  border-radius: 2px;          /* <-- ne 999px, ettől volt “amorf” */
+		  transform-origin: center;
+		  will-change: transform, opacity;
+		  transition: transform 420ms ease, opacity 355ms ease;
+		}
+
+		/* fix pozíciók (nem bottom:0), hogy a forgatás szépen középre essen */
+		#bttn_sideMenu .top{ top: 4px; }
+		#bttn_sideMenu .mid{ top: 9px; }
+		#bttn_sideMenu .bot{ top: 14px; }
+
+		/* ☰ -> "-" */
+		#bttn_sideMenu.is-minus .top{
+		  transform: translate3d(0,5px,0) scaleX(0);
+		}
+		#bttn_sideMenu.is-minus .bot{
+		  transform: translate3d(0,-5px,0) scaleX(0);
+		}
+		#bttn_sideMenu.is-minus .mid{
+		  transform: translate3d(0,0,0) scaleX(1);
+		  opacity: 1;
+		}
+
+		/* "-" -> "X" (pontos eltolás + rotate, élesebb) */
+		#bttn_sideMenu.is-x .top{
+		  transform: translate3d(0,5px,0) rotate(45deg);
+		}
+		#bttn_sideMenu.is-x .mid{
+		  opacity: 0;
+		  transform: translate3d(0,0,0) scaleX(0.2);
+		}
+		#bttn_sideMenu.is-x .bot{
+		  transform: translate3d(0,-5px,0) rotate(-45deg);
+		}
+		
+		.sideMenu_tartomany .side_alemnupont {
+			opacity: 0;
+			transform: translateY(-8px);
+		}
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont {
+			animation: sideAlmenuReveal 0.4s ease forwards;
+		}
+		
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(1) { animation-delay: 0.10s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(2) { animation-delay: 0.17s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(3) { animation-delay: 0.24s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(4) { animation-delay: 0.32s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(5) { animation-delay: 0.39s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(6) { animation-delay: 0.45s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(7) { animation-delay: 0.52s; }
+		.sideMenu_tartomany.sideMenu_tartomany_open .side_alemnupont:nth-child(8) { animation-delay: 0.59s; }
+		
+		@keyframes sideAlmenuReveal {
+				to { opacity: 1; transform: translateY(0); }
+		}
+		
+		
 		
 		@media screen and (max-height: 700px) and (max-width: 750px){
 			.oldal{				
@@ -3710,32 +3839,28 @@
 </head>
 <body>
 	<nav id="fomenu"> 
-		<div id="logo"> <img src="logo_darkblue_HN.png" alt="egymásra csusztatott lakások" loading="lazy"> </div>
-		<div id="cegnev" class="diszes">ST-Management</div>
-		<div id="toltes_fomenu1"> </div>
+		<div id="logo"> <img src="logo_darkblue_HN.png" alt="egymásra csusztatott lakások" style="opacity: 0.8;" loading="lazy"> </div>
+
+
 		<div id="fo_oldal" class="menupont" >Főoldal </div>	
 		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
 		<div id="ign_kivitelezes" class="menupont" >Kivitelezés </div>
 		<div id="ign_okosotthon" class="menupont" >Okosotthon </div>
 		<div id="ign_takaritas" class="menupont" >Takarítás </div>
 		<div id="ign_tanacsadas" class="menupont" >Tanácsadás </div>
-		<div id="toltes_fomenu2"> </div>
-		<div class="nyelv-valaszto">
-			<div class="nyelv-aktiv" id="nyelvToggle">
-				<img src="hungaryan_flag.png" alt="Magyar" loading="lazy">
-				<span class="arrow"></span>
-			</div>
-
-			<ul class="nyelv-lista">
-				<li onclick="location.href='kezeles.html'">
-					<img src="hungaryan_flag.png" alt="Magyar" loading="lazy">
-				</li>
-				<li onclick="location.href='kezeles_angol.html'">
-					<img src="british_flag.png" alt="English" loading="lazy">
-				</li>
-			</ul>
+		
+		<div class="nyelv-valaszto" >
+			<a href="index_angol.html">ENG </a>
 		</div>
-
+		
+		<div id="bttn_sideMenu" class="menupont" >
+			<span class="hamburgerIcon" aria-hidden="true">
+				<span class="line top"></span>
+				<span class="line mid"></span>
+				<span class="line bot"></span>
+			</span>
+		</div>
+		
 	</nav>
 	
 	<nav id="almenu"> 
@@ -3957,18 +4082,6 @@
 	</footer>
 	
 <script>
-	const nyelv = document.querySelector('.nyelv-valaszto');
-	const toggle = document.getElementById('nyelvToggle');
-
-	toggle.addEventListener('click', () => {
-		nyelv.classList.toggle('open');
-	});
-
-	document.addEventListener('click', (e) => {
-		if (!nyelv.contains(e.target)) {
-			nyelv.classList.remove('open');
-		}
-	});
 	
 	const linkek=[
 		{
