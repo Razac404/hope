@@ -3977,7 +3977,8 @@
 				<div class="sideMenu_tartomany kezelesAlmenuk">
 					<a href="kezeles.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="kezeles.html#tura_old" class="side_alemnupont">360° virtuális túrák ›</a>
-					<a href="kezeles.html#multiplatform_old" class="side_alemnupont">multiplatform vendégkommunikáció ›</a>
+					<a href="kezeles.html#multiplatform_old" class="side_alemnupont">multiplatform  ›</a>
+					<a href="kezeles.html#vendegkommunikacio_old" class="side_alemnupont">vendégkommunikáció ›</a>
 					<a href="kezeles.html#aroptimalizálás_old" class="side_alemnupont">ároptimalizálás ›</a>
 					<a href="kezeles.html#jogszabalyMegfel_old" class="side_alemnupont">jogszabályi megfelelés ›</a>
 					<a href="kezeles.html#ellenorzesek_old" class="side_alemnupont">ellenőrzések ›</a>
@@ -4535,6 +4536,37 @@
 				menupont.classList.add('side_menupont_open');
 			});
 		});
+		
+		
+		function scrollToHash(hash) {
+			if (!hash) return;
+			const id = hash.replace('#', '');
+			const target = document.getElementById(id);
+			if (!target) return;
+
+			updateFixedOffset();
+
+			const y = target.getBoundingClientRect().top + window.pageYOffset - fixedOffset;
+
+			window.scrollTo({ top: y, behavior: "smooth" });
+		}
+
+		sideMenu.querySelectorAll('a.side_alemnupont').forEach(function(a){
+			a.addEventListener('click', function(e){
+				
+				const href = a.getAttribute('href') || '';
+				const hashIndex = href.indexOf('#');
+				if (hashIndex === -1) return; 
+
+				e.preventDefault();
+
+				const hash = href.slice(hashIndex); // pl. "#rolunk_old"
+				scrollToHash(hash);
+
+				closeMenu();
+			});
+		});
+
 		
 		window.addEventListener('load', function() {
 		  const ta = document.getElementById('uzenet');
