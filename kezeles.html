@@ -846,7 +846,7 @@
 			right: 40px;
 			border: 1px solid gray;
 			border-radius: 25%;
-			padding: 10px 20px;
+			padding: 8px 20px;
 			font-size: 0.7rem;
 			transition: transform 0.4s ease-in-out;
 			cursor: pointer;
@@ -926,7 +926,27 @@
 		
 		#side_menu{
 			display: none;
-			
+			opacity: 0;
+			flex-direction: column;
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+			top: 90px;
+				
+			color: #f2f2f2;
+			justify-content: flex-start;
+			align-items: left;
+				
+			background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
+			backdrop-filter: blur(10px);
+			box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+			z-index: 1000;
+			padding: 20px;
+			gap: 12px;
+			overflow-y: auto;
+			transition: opacity 0.4s ease, visibility 0.4s ease;
+			pointer-events: none; 
+			color: black;
 		}
 
 		.sideMenu_tartomany{
@@ -942,7 +962,7 @@
 		
 		#side_menu a{
 				text-decoration: none;
-				color: #f2f2f2;
+				color: black;
 		}
 			
 		.sideMenu_tartomany.sideMenu_tartomany_open{
@@ -951,7 +971,11 @@
 		}
 		
 		.side_menupont.side_menupont_open {
-			color: #bfa27a;
+			color: #1e4a96;
+			/*
+			background:
+					radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
+					linear-gradient(180deg, white 0%, #050c1c 5%, #07142b 50%, #050c1c 100%);*/
 		}
 
 		#bttn_sideMenu{
@@ -979,7 +1003,7 @@
 		  left: 0;
 		  right: 0;
 		  height: 2px;
-		  background: #f2f2f2;
+		  background: black;
 		  border-radius: 2px;          /* <-- ne 999px, ettől volt “amorf” */
 		  transform-origin: center;
 		  will-change: transform, opacity;
@@ -1039,6 +1063,50 @@
 		
 		
 		@media screen and (max-height: 700px) and (max-width: 750px){
+			.menupont{
+				display: none;
+			}
+			.nyelv-valaszto{
+				display: none;
+			}
+			
+			#bttn_sideMenu{
+				display: flex;
+				position: absolute;
+				font-size: 0.9rem;
+				right: 40px;
+				cursor: pointer;
+			}
+			
+			#side_menu{
+				display: flex;
+				
+			}
+			
+			#side_menu.awake{
+				display: flex;
+				opacity: 1;
+				pointer-events: auto; 
+			}
+			
+			.side_menupont{
+				font-size: 1rem;
+				cursor: pointer;
+			}
+			
+			.sideMenu_tartomany{
+				margin-top: -10px;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+			
+			.side_alemnupont{
+				font-size: 0.85rem;
+				cursor: pointer;
+				padding-left: 20px;
+			}
+			
 			.oldal{				
 				height: calc(91vh - 100px) !important;				
 			}
@@ -1063,10 +1131,7 @@
 			#fomenu{
 				height: 100px;
 				width: 100%;
-				display: grid;
-				grid-template-columns: 16% 24% 20% 20% 20%;
-				grid-template-rows: 55% 45%;
-				gap: 0px;
+				
 			}
 			
 			.nyelv-aktiv img {
@@ -1368,6 +1433,69 @@
 		}
 		
 		@media screen and (min-height: 700px) and (max-width: 750px){
+			.menupont{
+				display: none;
+			}
+			.nyelv-valaszto{
+				display: none;
+			}
+			
+			#bttn_sideMenu{
+				display: flex;
+				position: absolute;
+				font-size: 0.9rem;
+				right: 40px;
+				cursor: pointer;
+			}
+			
+			#side_menu{
+				display: flex;
+				opacity: 0;
+				flex-direction: column;
+				height: 100vh;
+				width: 100vw;
+				position: fixed;
+				top: 90px;
+				
+				color: #f2f2f2;
+				justify-content: flex-start;
+				align-items: left;
+				
+				background: rgba(31, 31, 31, 0.98);
+				backdrop-filter: blur(10px);
+				box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+				z-index: 1000;
+				padding: 20px;
+				gap: 12px;
+				overflow-y: auto;
+				transition: opacity 0.4s ease, visibility 0.4s ease;
+				pointer-events: none; 
+			}
+			
+			#side_menu.awake{
+				display: flex;
+				opacity: 1;
+				pointer-events: auto; 
+			}
+			
+			.side_menupont{
+				font-size: 1.2rem;
+				cursor: pointer;
+			}
+			
+			.sideMenu_tartomany{
+				margin-top: -10px;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+			
+			.side_alemnupont{
+				font-size: 1.05rem;
+				cursor: pointer;
+				padding-left: 20px;
+			}
+			
 			.oldal{				
 				height: calc(85vh - 120px) !important;				
 			}
@@ -3863,6 +3991,69 @@
 		
 	</nav>
 	
+	<div id="side_menu"> 
+			<div id="side_fo_oldal" class="side_menupont" >	<a href="index.html" >Főoldal ›</a></div>	
+			
+			<div id="side_ign_kezeles" class="side_menupont">Ingatlan kezelés <span class="mutato">›</span></div>
+				<div class="sideMenu_tartomany kezelesAlmenuk">
+					<a href="kezeles.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
+					<a href="kezeles.html#tura_old" class="side_alemnupont">360° virtuális túrák ›</a>
+					<a href="kezeles.html#multiplatform_old" class="side_alemnupont">multiplatform vendégkommunikáció ›</a>
+					<a href="kezeles.html#aroptimalizálás_old" class="side_alemnupont">ároptimalizálás ›</a>
+					<a href="kezeles.html#jogszabalyMegfel_old" class="side_alemnupont">jogszabályi megfelelés ›</a>
+					<a href="kezeles.html#ellenorzesek_old" class="side_alemnupont">ellenőrzések ›</a>
+					<a href="kezeles.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
+					<a href="kezeles.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
+				</div>
+			<div id="side_ign_kivitelezes" class="side_menupont" >Kivitelezés <span class="mutato">›</span></div>
+				<div class="sideMenu_tartomany kivitelezesAlmenuk">
+					<a href="kivitelezes.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
+					<a href="kivitelezes.html#tura_old" class="side_alemnupont">teljes felújítás ›</a>
+					<a href="kivitelezes.html#multiplatform_old" class="side_alemnupont">lakásfelosztás ›</a>
+					<a href="kivitelezes.html#aroptimalizálás_old" class="side_alemnupont">beltéri 3D tervezés ›</a>
+					<a href="kivitelezes.html#jogszabalyMegfel_old" class="side_alemnupont">enteriőr tervezés ›</a>
+					<a href="kivitelezes.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
+					<a href="kivitelezes.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
+				</div>
+			<div id="side_ign_okosotthon" class="side_menupont" >Okosotthon <span class="mutato">›</span></div>
+				<div class="sideMenu_tartomany okosotthonAlmenuk">
+					<a href="okosotthon.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
+					<a href="okosotthon.html#tura_old" class="side_alemnupont">okos zárak ›</a>
+					<a href="okosotthon.html#multiplatform_old" class="side_alemnupont">kamera rendszerek ›</a>
+					<a href="okosotthon.html#aroptimalizálás_old" class="side_alemnupont">okos kilincsek ›</a>
+					<a href="okosotthon.html#jogszabalyMegfel_old" class="side_alemnupont">mobilalkalmazások ›</a>
+					<a href="okosotthon.html#ellenorzesek_old" class="side_alemnupont">ellenőrzések ›</a>
+					<a href="okosotthon.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
+					<a href="okosotthon.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
+				</div>
+			<div id="side_ign_takaritas" class="side_menupont" >Takarítás <span class="mutato">›</span></div>
+				<div class="sideMenu_tartomany takaritasAlmenuk">
+					<a href="takaritas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
+					<a href="takaritas.html#tura_old" class="side_alemnupont">rendszeres takarítás ›</a>
+					<a href="takaritas.html#multiplatform_old" class="side_alemnupont">alkalmi takarítás ›</a>
+					<a href="takaritas.html#aroptimalizálás_old" class="side_alemnupont">minőségünk ›</a>
+					<a href="takaritas.html#jogszabalyMegfel_old" class="side_alemnupont">mosodánk ›</a>
+					<a href="takaritas.html#minosegellenorzes_old" class="side_alemnupont">minőségellenőrzés ›</a>
+					<a href="takaritas.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
+					<a href="takaritas.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
+				</div>
+			<div id="side_ign_tanacsadas" class="side_menupont" >Tanácsadás <span class="mutato">›</span></div>
+				<div class="sideMenu_tartomany tanacsadasAlmenuk">
+					<a href="tanacsadas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
+					<a href="tanacsadas.html#tura_old" class="side_alemnupont">stratégiai tanácsadás ›</a>
+					<a href="tanacsadas.html#multiplatform_old" class="side_alemnupont">piacelemzés ›</a>
+					<a href="tanacsadas.html#aroptimalizálás_old" class="side_alemnupont">jogi segítség ›</a>
+					<a href="tanacsadas.html#jogszabalyMegfel_old" class="side_alemnupont">bevétel maximalizálás ›</a>
+					<a href="tanacsadas.html#szegmentalas_old" class="side_alemnupont">piacszegmentálás ›</a>
+					<a href="tanacsadas.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
+					<a href="tanacsadas.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
+				</div>
+			
+			<div id="side_Nyelv" class="side_menupont" >
+				<a href="index_angol.html" style="text-decoration:none; color:white;">ENG </a>
+			</div>
+	</div>
+	
 	<nav id="almenu"> 
 		<div id="almenu0" class="al_menupont" >rólunk</div>
 		<div id="almenu1" class="al_menupont" >360° virtuális túrák</div>	
@@ -4300,7 +4491,66 @@
     updateActiveMenu();
 });
 
+	(function () {
+		var fomenu = document.getElementById('fomenu');
+		var bttn = document.getElementById('bttn_sideMenu');
+		var sideMenu = document.getElementById('side_menu');
+		if (!fomenu || !bttn || !sideMenu) return;
 
+		let animLock = false;
+
+		function openMenu(){
+			sideMenu.classList.add('awake');
+			bttn.classList.add('is-minus');
+			bttn.setAttribute('aria-expanded','true');
+
+			// "-" után alakuljon X-é
+			setTimeout(() => {
+				bttn.classList.remove('is-minus');
+				bttn.classList.add('is-x');
+			}, 170);
+		}
+
+		function closeMenu(){
+			sideMenu.classList.remove('awake');
+			bttn.classList.add('is-minus');
+			bttn.setAttribute('aria-expanded','false');
+
+			// "-" után vissza ☰-re
+			setTimeout(() => {
+				bttn.classList.remove('is-minus');
+				bttn.classList.remove('is-x');
+			}, 170);
+		}
+
+		bttn.addEventListener('click', function () {
+			if (animLock) return;
+			animLock = true;
+
+			const isOpen = sideMenu.classList.contains('awake');
+			if (isOpen) closeMenu();
+			else openMenu();
+
+			setTimeout(() => { animLock = false; }, 260);
+		});
+
+		// Side menupont: csak a saját tartomány látszik, a kattintott menupont barnás
+		sideMenu.querySelectorAll('.side_menupont').forEach(function (menupont) {
+			var tartomany = menupont.nextElementSibling;
+			if (!tartomany || !tartomany.classList.contains('sideMenu_tartomany')) return;
+
+			menupont.addEventListener('click', function () {
+				sideMenu.querySelectorAll('.sideMenu_tartomany').forEach(function (t) {
+					t.classList.remove('sideMenu_tartomany_open');
+				});
+				sideMenu.querySelectorAll('.side_menupont').forEach(function (m) {
+					m.classList.remove('side_menupont_open');
+				});
+				tartomany.classList.add('sideMenu_tartomany_open');
+				menupont.classList.add('side_menupont_open');
+			});
+		});
+	})();
 	
 </script>
 
