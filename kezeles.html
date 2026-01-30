@@ -969,7 +969,7 @@
 		}
 		
 		.side_menupont.side_menupont_open {
-			color: #1e4a96;
+			color: #1e4a96 !important;
 			/*
 			background:
 					radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
@@ -1078,7 +1078,7 @@
 			
 			#side_menu{
 				display: flex;
-				
+				top: 70px;
 			}
 			
 			#side_menu.awake{
@@ -1106,11 +1106,11 @@
 			}
 			
 			.oldal{				
-				height: calc(91vh - 100px) !important;				
+				height: calc(91vh - 70px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 100px;
+				height: 70px;
 			}
 		
 			#toltes_fomenu1{
@@ -1127,7 +1127,7 @@
 			}
 			
 			#fomenu{
-				height: 100px;
+				height: 70px;
 				width: 100%;
 				
 			}
@@ -1448,7 +1448,7 @@
 			
 			#side_menu{
 				display: flex;
-				
+				top: 80px;
 			}
 			
 			#side_menu.awake{
@@ -1476,11 +1476,11 @@
 			}
 			
 			.oldal{				
-				height: calc(85vh - 120px) !important;				
+				height: calc(85vh - 80px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 120px;
+				height: 80px;
 			}
 		
 			#toltes_fomenu1{
@@ -1497,7 +1497,7 @@
 			}
 			
 			#fomenu{
-				height: 120px;
+				height: 80px;
 				width: 100%;
 				display: grid;
 				grid-template-columns: 16% 24% 20% 20% 20%;
@@ -3973,7 +3973,7 @@
 	<div id="side_menu"> 
 			<div id="side_fo_oldal" class="side_menupont" >	<a href="index.html" >Főoldal ›</a></div>	
 			
-			<div id="side_ign_kezeles" class="side_menupont">Ingatlan kezelés <span class="mutato">›</span></div>
+			<a id="side_ign_kezeles" class="side_menupont" href="kezeles.html">Ingatlan kezelés <span class="mutato">›</span></a>
 				<div class="sideMenu_tartomany kezelesAlmenuk">
 					<a href="kezeles.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="kezeles.html#tura_old" class="side_alemnupont">360° virtuális túrák ›</a>
@@ -3984,7 +3984,7 @@
 					<a href="kezeles.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="kezeles.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
-			<div id="side_ign_kivitelezes" class="side_menupont" >Kivitelezés <span class="mutato">›</span></div>
+			<a id="side_ign_kivitelezes" class="side_menupont" href="kivitelezes.html">Kivitelezés <span class="mutato">›</span></a>
 				<div class="sideMenu_tartomany kivitelezesAlmenuk">
 					<a href="kivitelezes.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="kivitelezes.html#tura_old" class="side_alemnupont">teljes felújítás ›</a>
@@ -3994,7 +3994,7 @@
 					<a href="kivitelezes.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="kivitelezes.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
-			<div id="side_ign_okosotthon" class="side_menupont" >Okosotthon <span class="mutato">›</span></div>
+			<a id="side_ign_okosotthon" class="side_menupont" href="okosotthon.html">Okosotthon <span class="mutato">›</span></a>
 				<div class="sideMenu_tartomany okosotthonAlmenuk">
 					<a href="okosotthon.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="okosotthon.html#tura_old" class="side_alemnupont">okos zárak ›</a>
@@ -4005,7 +4005,7 @@
 					<a href="okosotthon.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="okosotthon.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
-			<div id="side_ign_takaritas" class="side_menupont" >Takarítás <span class="mutato">›</span></div>
+			<a id="side_ign_takaritas" class="side_menupont" href="takaritas.html">Takarítás <span class="mutato">›</span></a>
 				<div class="sideMenu_tartomany takaritasAlmenuk">
 					<a href="takaritas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="takaritas.html#tura_old" class="side_alemnupont">rendszeres takarítás ›</a>
@@ -4016,7 +4016,7 @@
 					<a href="takaritas.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="takaritas.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
-			<div id="side_ign_tanacsadas" class="side_menupont" >Tanácsadás <span class="mutato">›</span></div>
+			<a id="side_ign_tanacsadas" class="side_menupont" href="tanacsadas.html">Tanácsadás <span class="mutato">›</span></a>
 				<div class="sideMenu_tartomany tanacsadasAlmenuk">
 					<a href="tanacsadas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="tanacsadas.html#tura_old" class="side_alemnupont">stratégiai tanácsadás ›</a>
@@ -4513,12 +4513,18 @@
 			setTimeout(() => { animLock = false; }, 260);
 		});
 
-		// Side menupont: csak a saját tartomány látszik, a kattintott menupont barnás
 		sideMenu.querySelectorAll('.side_menupont').forEach(function (menupont) {
 			var tartomany = menupont.nextElementSibling;
 			if (!tartomany || !tartomany.classList.contains('sideMenu_tartomany')) return;
 
-			menupont.addEventListener('click', function () {
+			menupont.addEventListener('click', function (e) {
+				var isOpen = tartomany.classList.contains('sideMenu_tartomany_open');
+				if (isOpen) {
+					// Tartomány már nyitva → hagyjuk, hogy a link menjen (href)
+					return;
+				}
+				// Tartomány zárva → nyitás, ne navigáljunk
+				e.preventDefault();
 				sideMenu.querySelectorAll('.sideMenu_tartomany').forEach(function (t) {
 					t.classList.remove('sideMenu_tartomany_open');
 				});
@@ -4528,6 +4534,13 @@
 				tartomany.classList.add('sideMenu_tartomany_open');
 				menupont.classList.add('side_menupont_open');
 			});
+		});
+		
+		window.addEventListener('load', function() {
+		  const ta = document.getElementById('uzenet');
+		  if (ta) {
+			ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+		  }
 		});
 	})();
 	
