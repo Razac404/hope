@@ -1024,17 +1024,31 @@
 		}
 		
 		.reszletek{
-			padding: 18px;
+			padding: 3px 10px;
 			position: absolute;
 			bottom: 10px;
-			left: 18px;
+			
 			cursor: pointer;
 			z-index: 1;
+			
+			background: RGB(224, 193, 142);
+			border-radius: 20px;
+			
+			left: 50%;
+			transform: translateX(-50%);
+			right:18px;
+			
 		}
 		
 		.reszletek a:hover{
-			text-decoration:underline;
+			text-decoration: none;
+			
 		}
+		.reszletek:hover{
+			/*border: 1px solid black;*/
+			color: rgba(245, 238, 225, 0.9);
+		}
+		
 		
 		.nyelv-valaszto {
 			position: absolute;
@@ -1482,6 +1496,9 @@
 			.reszletek{
 				padding: 5px;
 				bottom: 7px;
+				left: auto;
+				right: 18px;
+				transform: none;
 			}
 		
 			.kep img {
@@ -1855,6 +1872,9 @@
 			
 			.reszletek{
 				padding: 5px;
+				left: auto;
+				right: 18px;
+				transform: none;
 			}
 		
 			.kep img {
@@ -2198,6 +2218,9 @@
 			
 			.reszletek{
 				padding: 1px;
+				left: auto;
+				right: 18px;
+				transform: none;
 			}
 			
 			.kep img {
@@ -2430,10 +2453,12 @@
 			}
 			
 			.reszletek{
-				padding: 18px 18px 5px 18px;
+				padding: 10px;
 				position: absolute;
-				bottom: 5px;
-				
+				bottom: 4px;
+				right: auto;
+				left: 50%; 
+				transform: translateX(-50%);
 			}
 			
 			
@@ -2618,9 +2643,9 @@
 			}
 			
 			.reszletek{
-				padding: 18px 18px 5px 18px;
+				padding: 7px 10px;
 				position: absolute;
-				bottom: 10px;
+				bottom: 5px;
 				
 			}
 			
@@ -2793,7 +2818,7 @@
 			}
 			
 			.reszletek{
-				padding: 18px;
+				padding: 12px;
 				position: absolute;
 				bottom: 5px;
 				
@@ -3730,7 +3755,7 @@
 							hogy maximális bevételt biztosítsanak Önnek, miközben minimalizálják a tulajdonosi teendőket.
 							<br>
 							<br>
-							<br> <span id="reszletek1" class="reszletek" ><a>további részletek ➾ </a></span>
+							<br> <span id="reszletek1" class="reszletek" ><a>további részletek  </a></span>
 						</div>
 					</div>
 					<div class="szolgaltatasok_badge keret"></div>
@@ -3747,7 +3772,7 @@
 							tapasztalt kivitelező csapatunk teljes körű átalakítást kínál!
 							<br>
 							<br>
-							<br> <span id="reszletek2" class="reszletek" ><a>további részletek ➾ </a></span>
+							<br> <span id="reszletek2" class="reszletek" ><a>további részletek  </a></span>
 						</div>
 					</div>
 					<div class="szolgaltatasok_badge"></div>
@@ -3762,9 +3787,9 @@
 						<div id="szolg3_leiras" class="leiras">
 							Emelje ingatlanát a következő szintre modern okostechnológiákkal, amelyek kényelmesebbé,
 							biztonságosabbá és hatékonyabbá teszik a működtetést!
-							<br>
-							<br>
-							<br> <span id="reszletek3" class="reszletek" ><a>további részletek ➾ </a></span>
+							
+							
+							<span id="reszletek3" class="reszletek" ><a>további részletek  </a></span>
 						</div>
 					</div>
 					<div class="szolgaltatasok_badge"></div>
@@ -3782,7 +3807,7 @@
 							Saját takarító- és mosodai szolgáltatásunk biztosítja az ingatlanok folyamatosan magas színvonalú tisztaságát.
 							<br>
 							<br>
-							<br> <span id="reszletek4" class="reszletek" ><a>további részletek ➾ </a></span>
+							<br> <span id="reszletek4" class="reszletek" ><a>további részletek </a></span>
 						</div>
 					</div>
 					<div class="szolgaltatasok_badge"></div>
@@ -3799,7 +3824,7 @@
 							segítséget befektetőknek, tulajdonosoknak és vásárlóknak egyaránt.
 							<br>
 							<br>
-							<br> <span id="részletek5" class="reszletek"><a>további részletek ➾ </a></span>
+							<br> <span id="részletek5" class="reszletek"><a>további részletek </a></span>
 						</div>
 					</div>
 					<div class="szolgaltatasok_badge"></div>
