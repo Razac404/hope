@@ -860,7 +860,7 @@
 
 		#side_Nyelv{
 			color: #f2f2f2;
-			border: 1px solid #f2f2f2;
+			border: 1px solid black;
 			border-radius: 25%;
 			padding: 5px 20px;
 			width: fit-content;
@@ -3992,7 +3992,8 @@
 					<a href="kivitelezes.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="kivitelezes.html#tura_old" class="side_alemnupont">teljes felújítás ›</a>
 					<a href="kivitelezes.html#multiplatform_old" class="side_alemnupont">lakásfelosztás ›</a>
-					<a href="kivitelezes.html#aroptimalizálás_old" class="side_alemnupont">beltéri 3D tervezés ›</a>
+					<a href="kivitelezes.html#vendegkommunikacio_old" class="side_alemnupont">beltér›</a>
+					<a href="kivitelezes.html#aroptimalizálás_old" class="side_alemnupont">3D tervezés ›</a>
 					<a href="kivitelezes.html#jogszabalyMegfel_old" class="side_alemnupont">enteriőr tervezés ›</a>
 					<a href="kivitelezes.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="kivitelezes.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
@@ -4002,9 +4003,9 @@
 					<a href="okosotthon.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="okosotthon.html#tura_old" class="side_alemnupont">okos zárak ›</a>
 					<a href="okosotthon.html#multiplatform_old" class="side_alemnupont">kamera rendszerek ›</a>
-					<a href="okosotthon.html#aroptimalizálás_old" class="side_alemnupont">okos kilincsek ›</a>
-					<a href="okosotthon.html#jogszabalyMegfel_old" class="side_alemnupont">mobilalkalmazások ›</a>
-					<a href="okosotthon.html#ellenorzesek_old" class="side_alemnupont">ellenőrzések ›</a>
+					<a href="okosotthon.html#vendegkommunikacio_old" class="side_alemnupont">okos kilincsek ›</a>
+					<a href="okosotthon.html#aroptimalizálás_old" class="side_alemnupont">mobilalkalmazások ›</a>
+					<a href="okosotthon.html#jogszabalyMegfel_old" class="side_alemnupont">ellenőrzések ›</a>
 					<a href="okosotthon.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="okosotthon.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
@@ -4013,9 +4014,9 @@
 					<a href="takaritas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="takaritas.html#tura_old" class="side_alemnupont">rendszeres takarítás ›</a>
 					<a href="takaritas.html#multiplatform_old" class="side_alemnupont">alkalmi takarítás ›</a>
-					<a href="takaritas.html#aroptimalizálás_old" class="side_alemnupont">minőségünk ›</a>
-					<a href="takaritas.html#jogszabalyMegfel_old" class="side_alemnupont">mosodánk ›</a>
-					<a href="takaritas.html#minosegellenorzes_old" class="side_alemnupont">minőségellenőrzés ›</a>
+					<a href="takaritas.html#vendegkommunikacio_old" class="side_alemnupont">minőségünk ›</a>
+					<a href="takaritas.html#aroptimalizálás_old" class="side_alemnupont">mosodánk ›</a>
+					<a href="takaritas.html#jogszabalyMegfel_old" class="side_alemnupont">minőségellenőrzés ›</a>
 					<a href="takaritas.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="takaritas.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
@@ -4024,15 +4025,15 @@
 					<a href="tanacsadas.html#rolunk_old" class="side_alemnupont">rólunk ›</a>
 					<a href="tanacsadas.html#tura_old" class="side_alemnupont">stratégiai tanácsadás ›</a>
 					<a href="tanacsadas.html#multiplatform_old" class="side_alemnupont">piacelemzés ›</a>
-					<a href="tanacsadas.html#aroptimalizálás_old" class="side_alemnupont">jogi segítség ›</a>
-					<a href="tanacsadas.html#jogszabalyMegfel_old" class="side_alemnupont">bevétel maximalizálás ›</a>
-					<a href="tanacsadas.html#szegmentalas_old" class="side_alemnupont">piacszegmentálás ›</a>
+					<a href="tanacsadas.html#vendegkommunikacio_old" class="side_alemnupont">jogi segítség ›</a>
+					<a href="tanacsadas.html#aroptimalizálás_old" class="side_alemnupont">bevétel maximalizálás ›</a>
+					<a href="tanacsadas.html#jogszabalyMegfel_old" class="side_alemnupont">piacszegmentálás ›</a>
 					<a href="tanacsadas.html#uzenet_iras" class="side_alemnupont">árajánlat ›</a>
 					<a href="tanacsadas.html#kapcsolat" class="side_alemnupont">kapcsolat ›</a>
 				</div>
 			
 			<div id="side_Nyelv" class="side_menupont" >
-				<a href="kezeles_angol.html" style="text-decoration:none; color:white;">ENG </a>
+				<a href="kezeles_angol.html" style="text-decoration:none; ">ENG </a>
 			</div>
 	</div>
 	
@@ -4555,17 +4556,23 @@
 
 		sideMenu.querySelectorAll('a.side_alemnupont').forEach(function(a){
 			a.addEventListener('click', function(e){
-				
 				const href = a.getAttribute('href') || '';
-				const hashIndex = href.indexOf('#');
-				if (hashIndex === -1) return; 
+				if (!href) return;
 
-				e.preventDefault();
+				const linkUrl = new URL(href, window.location.href);
+				const isCurrentPage = (linkUrl.pathname === window.location.pathname);
+				const hash = linkUrl.hash;
 
-				const hash = href.slice(hashIndex); // pl. "#rolunk_old"
-				scrollToHash(hash);
-
-				closeMenu();
+				if (isCurrentPage && hash) {
+					e.preventDefault();
+					scrollToHash(hash);
+					closeMenu();
+				}
+				// Ha másik oldalra mutat (pl. kivitelezes.html#rolunk_old): ne preventDefault,
+				// a böngésző betölti az oldalt és a hash miatt oda görget
+				else if (!isCurrentPage) {
+					closeMenu();
+				}
 			});
 		});
 
