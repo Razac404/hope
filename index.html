@@ -6,7 +6,7 @@
 	<title>ST-Management | Főoldal</title>
 	<link rel="icon" href="logo_black_IC.png" type="image/png" id="favicon">
 	
-<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
@@ -739,6 +739,16 @@
 			background-size:cover;
 			background-position: center;
 			/*border: 1px solid red;*/
+			position: relative;
+		}
+		
+		#uzenet_iras::before{
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: rgba(0,0,0,0.5);  /* itt állítod a fátyol erősségét */
+			z-index: 1;
+			pointer-events: none;
 		}
 		
 		#kapcsolat_felirat{
@@ -748,6 +758,7 @@
 			font-size: 1.5rem;
 			line-height: 1.0;
 			margin-top: 5px;
+			z-index: 5;
 		}
 		
 		#arAjanlat{
@@ -755,6 +766,7 @@
 			font-weight: 600;
 			cursor: pointer;
 			padding: 0 5%;
+			
 		}
 		
 		
@@ -782,6 +794,7 @@
 			flex-direction: column;
 			gap: 10px;
 			margin-top: 55px;
+			z-index: 5;
 		}
 		
 		.form-group {
@@ -940,7 +953,9 @@
 		}
 		
 		
-		
+		.gyorsmenupont:hover{
+			transform: scale(1.05);
+		}
 		
 		/*
 		.logok_gyors{
@@ -949,7 +964,7 @@
 		*/
 		
 		#logo1{
-			background-image: url('logo_kezel3.png');
+			background-image: url('logo_kezel5.png');
 			background-size: 95% auto;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -1013,7 +1028,7 @@
 		
 		
 		#kezeles_gyorsmenu{
-			color: #687EA8;
+			color: #EAE8E3;
 		}
 		
 		#kivitelezes_gyorsmenu{
@@ -3635,7 +3650,7 @@
 		<div id="logo"> <img src="logo_white.png.PNG" alt="egymásra csusztatott lakások" style="opacity: 0.8;" loading="lazy"> </div>
 
 
-		<div id="fo_oldal" class="menupont" >CÉGCSOPORTUNK </div>	
+		<div id="fo_oldal" class="menupont" >Főoldal </div>	
 		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
 		<div id="ign_kivitelezes" class="menupont" >Kivitelezés </div>
 		<div id="ign_okosotthon" class="menupont" >Okosotthon </div>
@@ -3731,7 +3746,7 @@
 			</video>
 			<div class="overlay">
 				<img src="logo_white.png.PNG" alt="egymásra csusztatott lakások" loading="lazy">
-				<span  class="diszes" style="">ST-Management Linkek</span>
+				<span  class="diszes" style="">ST-Management</span>
 				
 			</div>
 			<div id="arrowV"> </div>
@@ -3837,22 +3852,15 @@
 				
 				<h1 style="align-self:center; justify-self:center; text-align: center;"> Itt teljesebb képet kaphatsz rólunk</h1>
 				
-				<p>Üdvözöljük az ST Managementnél, ahol a stratégiai gondolkodás a gyakorlatban megvalósuló kiválósággal találkozik az ingatlankezelés területén. Teljes körű ingatlankezelési és tanácsadói szolgáltatásokat nyújtó vállalatként elkötelezetten támogatjuk tulajdonosainkat, befektetőinket és bérbeadóinkat abban, hogy megóvják, növeljék és hosszú távon gyarapítsák eszközeik értékét.
+				<p>Az ST Managementnél az ingatlankezelés több mint szolgáltatás — stratégiai szemlélettel irányított értékteremtés. Teljes körű ingatlankezelési és tanácsadói megoldásainkkal tulajdonosokat és befektetőket támogatunk abban, hogy eszközeik megőrizzék stabilitásukat, növeljék teljesítményüket, és hosszú távon is kiemelkedő értéket képviseljenek.
 				</p>
-				<p>Cégünknél személyre szabott tanácsadást és szakértői iránymutatást biztosítunk az ingatlantulajdonlás minden szakaszában — a megfelelő befektetés kiválasztásától és a megalapozott vásárlási döntésektől kezdve a napi üzemeltetésen át egészen a hosszú távú értékteremtésig. Szolgáltatásaink közé tartozik az átfogó ingatlankezelés, professzionális takarítás, magas színvonalú felújítások, valamint egyedi eszköz- és vagyonkezelési tanácsadás, amely a teljesítmény és a fenntarthatóság maximalizálását szolgálja.
+				<p>Munkánk alapja a személyre szabott gondolkodás és a precíz kivitelezés. Az ingatlantulajdonlás minden szakaszában szakértő iránymutatást nyújtunk — a tudatos befektetési döntésektől és strukturált vásárlásoktól kezdve a napi üzemeltetésen át egészen a fenntartható, mérhető értéknövelésig. Szolgáltatásaink magukban foglalják az átfogó ingatlankezelést, a professzionális üzemeltetést, a magas színvonalú karbantartást és felújításokat, valamint az egyedi vagyonkezelési tanácsadást.
 				</p>
-				<p>Kifinomult részletekre való odafigyeléssel, az átláthatóság iránti elkötelezettséggel és eredményorientált szemlélettel alakítjuk át az ingatlanokat jól működő, nyereséges és időtálló befektetésekké. Legyen szó első ingatlana megszerzéséről vagy egy sokrétű portfólió optimalizálásáról, az ST Management magabiztosságot, hatékonyságot és kifinomultságot nyújt — hogy eszközei intelligensebben működjenek, erőteljesebben növekedjenek, és hosszú távon is megállják a helyüket.
+				<p>Az ST Management működését az átláthatóság, a részletek iránti kompromisszummentes figyelem és az eredményorientált szemlélet határozza meg. Ingatlanokat alakítunk át kiegyensúlyozottan működő, időtálló és jövedelmező befektetésekké — diszkréten, hatékonyan, következetesen. Legyen szó egyetlen prémium ingatlanról vagy komplex portfólió kezeléséről, ügyfeleink számára magabiztosságot, nyugalmat és kifinomult megoldásokat biztosítunk.
 				</p>
-				<p>Vállalatunk megbízható partnerként azon dolgozik, hogy az ingatlantulajdonlás gördülékeny, átlátható és valóban értékteremtő élmény legyen. Büszkék vagyunk arra, hogy kivételes ingatlankezelési szolgáltatásokat nyújtunk precizitással, integritással és gondoskodással. Tapasztalt csapatunk minden részletet felügyel — a napi működéstől az eszközök hosszú távú védelméig — biztosítva, hogy minden ingatlan a legmagasabb színvonalon legyen fenntartva.
+				<p>Hisszük, hogy a valódi érték a hosszú távú partnerségekben rejlik. Tapasztalt csapatunk minden részletet felügyel a napi működéstől az eszközök stratégiai védelméig, biztosítva, hogy a ránk bízott ingatlanok a lehető legmagasabb színvonalon teljesítsenek — funkcionális, pénzügyi és esztétikai szempontból egyaránt.
 				</p>
-				<p>Akár egyetlen ingatlan tulajdonosa, akár növekvő portfóliót kezel, strukturált megoldásokat, eleganciát és nyugalmat biztosítunk befektetése számára, lehetővé téve, hogy Ön arra összpontosítson, ami igazán fontos, miközben mi minden másról gondoskodunk. Megközelítésünk az előrelátó kommunikáción, az egyedi megoldásokon és azon a mély szakmai tudáson alapul, amely szükséges az ingatlanok kifogástalan működtetéséhez — mind funkcionális, mind pénzügyi szempontból.
-				</p>
-				<p>Elkötelezettek vagyunk a hosszú távú kapcsolatok építése mellett, melyeket az átláthatóság, a gyors reagálás és a mérhető eredmények jellemeznek. Ezt a szemléletet tükrözi ügyfeleink bizalma és elégedettsége, akik ránk bízzák befektetéseik védelmét és értékük növelését. Az ST Managementnél az ingatlan nem csupán kezelt — szakértő kezekben van.
-				</p>
-				<p>Csapatunk a kompromisszumok nélküli kiválóságot képviseli. Tapasztalat, precizitás és professzionalizmus köt össze bennünket, miközben közös értékeink az integritás, a diszkréció és az eredményesség. Minden döntésünket stratégiai szemlélet és rendíthetetlen részletorientáltság vezérli, biztosítva, hogy a gondozásunk alatt álló ingatlanok a lehető legmagasabb szinten teljesítsenek.
-				</p>
-				<p>Mi többek vagyunk egyszerű kezelőknél — kiemelkedő kereskedelmi ingatlanok megbízható gondnokai, akik elkötelezettek az érték növelése, a kapcsolatok erősítése és egy olyan szolgáltatási színvonal nyújtása mellett, amely valódi üzleti értékeket tükröz.
-				</p>
+				
 				
 		</article>
 		
@@ -3945,7 +3953,7 @@
 			<div id="elerhetosegeink">
 				<div id="telefon_email"> 
 					<div>✉️ <strong>Email:</strong> <a href="mailto:info@stmanagement.hu"> info@stmanagement.hu</a> </div>
-					<div>📞 <strong>Telefon:</strong> <a href="tel:+36301865215">+36 30 186 5215</a>	</div>
+					<div>📞 <strong>Telefon:</strong> <a href="tel:+36705733408">+36 70 573 3408</a>	</div>
 				</div>
 
 				<div id="gmap"> 
