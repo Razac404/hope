@@ -687,38 +687,71 @@
 		}
 
 		#bemutatkozas{
+			display: flex;
 			height: auto;
 			width: 100%;
 			background: rgba(210, 196, 170, 0.92);
-
 			color: black;
-			padding: 2% 10%;
+			padding: 2%;
 			font-size: 1.2rem;
-			overflow: auto;
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 3rem;
+			gap: 1rem;
 			align-content: center;
 			line-height: 1.8;
 			letter-spacing: 0.02em;
+			align-items: start;
+		}
+		
+		#bem_1{
+			width: 20%;
+			position: sticky;
+			padding-top: 3.4%;
+			top: 100px;            
+			align-self: start;    
+			border-top: 5px solid rgba(245, 238, 225, 0.9);
+			border-radius: 5px;
+		}
+		
+		#bem_2{
+			width: 75%;
 			
-			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			
+			border-radius: 20px;
+
+			/*border-top: 2px solid #bfa27a;*/
+			gap: 1rem;
+		}
+		
+		
+		#bem_2 :first-child{
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+		
+		#bem_2 :last-child{
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
 		}
 		
 		#bemutatkozas h1 {
 			font-size: 2.3rem;
+			white-space: nowrap;
 		}
 		
-		#bemutatkozas p {
+		#bem_2 p {
 			margin: 0;
-			padding: 2rem;
+			padding: 0.75rem 1rem;
 			background: rgba(245, 238, 225, 0.9);
 
-			backdrop-filter: blur(10px);
+			border: none !important;
+			border-radius: 20px;
 			border-left: 5px solid #bfa27a;
-			border-radius: 12px;
+			
+			
 			transition: transform 0.3s ease, background 0.3s ease;
 			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			
 		}
 
 		#bemutatkozas p:hover {
@@ -1216,7 +1249,7 @@
 		  right: 0;
 		  height: 2px;
 		  background: #f2f2f2;
-		  border-radius: 2px;          /* <-- ne 999px, ettől volt “amorf” */
+		  border-radius: 2px;          
 		  transform-origin: center;
 		  will-change: transform, opacity;
 		  transition: transform 420ms ease, opacity 355ms ease;
@@ -1554,7 +1587,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 1rem;
+				padding: 1rem 2rem;
 			}
 			
 			#kapcsolat_felirat{
@@ -1614,7 +1647,7 @@
 				display:grid;
 				grid-template-columns: 100%;
 				grid-template-rows: 40% 60%;
-				color: white;
+				
 			}
 			
 			#arAjanlat {
@@ -1992,7 +2025,7 @@
 				display:grid;
 				grid-template-columns: 100%;
 				grid-template-rows: 40% 60%;
-				color: white;
+				
 			}
 			
 			#arAjanlat {
@@ -2339,7 +2372,7 @@
 				display:grid;
 				grid-template-columns: 100%;
 				grid-template-rows: 40% 60%;
-				color: white;
+				
 			}
 			
 			#arAjanlat {
@@ -2541,7 +2574,6 @@
 			}
 			
 			#bemutatkozas{
-				padding: 2% 17%;
 				font-size: 0.85rem;
 				grid-template-columns: 1fr;
 				gap: 1.8rem;
@@ -2556,7 +2588,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 0.8rem 2rem;
 			}
 			
 			#gyorsmenu{
@@ -2712,22 +2744,15 @@
 			}
 			
 			#bemutatkozas{
-				padding: 2% 17%;
 				font-size: 0.9rem;
-				grid-template-columns: 1fr;
-				gap: 2.2rem;
-				line-height: 1.8;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
-				font-size: 1.7rem;
+				font-size: 1.5rem;
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 0.8rem 2rem;
 			}
 			
 			#gyorsmenu{
@@ -2839,24 +2864,15 @@
 			}
 		
 			#bemutatkozas{
-				height: auto;
-				width: 100%;
-				padding: 2% 10%;
 				font-size: 1.0rem;
-				gap: 1.5rem;
-				line-height: 1.5;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
-				font-size: 2.1rem;
+				font-size: 1.9rem;
 			}
 			
 			#bemutatkozas p {
-				margin: 0;
-				padding: 2rem;
+				padding: 1rem 2rem;
 			}
 			
 			#uzenet_form button {			
@@ -3001,14 +3017,7 @@
 			}
 			
 			#bemutatkozas{
-				padding: 2% 17%;
 				font-size: 0.85rem;
-				grid-template-columns: 1fr;
-				gap: 1.8rem;
-				line-height: 1.8;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
@@ -3016,7 +3025,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 1rem 2rem;
 			}
 			
 			#gyorsmenu{
@@ -3153,14 +3162,8 @@
 			}
 			
 			#bemutatkozas{
-				padding: 2% 17%;
 				font-size: 0.9rem;
-				grid-template-columns: 1fr;
-				gap: 2.2rem;
-				line-height: 1.8;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
+
 			}
 			
 			#bemutatkozas h1 {
@@ -3168,7 +3171,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 1rem 2rem;
 			}
 			
 			#gyorsmenu{
@@ -3271,15 +3274,8 @@
 			}
 			
 			#bemutatkozas{
-				height: auto;
-				width: 100%;
-				padding: 2% 10%;
+
 				font-size: 1.0rem;
-				gap: 2rem;
-				line-height: 1.5;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
@@ -3287,8 +3283,7 @@
 			}
 			
 			#bemutatkozas p {
-				margin: 0;
-				padding: 1.8rem;/*2rem*/
+				padding: 1rem 2rem;
 			}
 			
 			#kapcsolat_felirat{
@@ -3484,15 +3479,8 @@
 				margin-top: 0px; /*10px*/
 			}
 			
-			#bemutatkozas{
-				padding: 2% 17%;
+			#bemutatkozas{	
 				font-size: 0.9rem;
-				grid-template-columns: 1fr;
-				gap: 2.2rem;
-				line-height: 1.8;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
@@ -3500,7 +3488,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 1rem 2rem;
 			}
 			
 			#telefon_email{    
@@ -3558,14 +3546,9 @@
 			}
 		
 			#bemutatkozas{
-				padding: 2% 10%;
+				padding: 2%;
 				font-size: 1.2rem;
 				grid-template-columns: 1fr;
-				gap: 3rem;
-				line-height: 1.8;
-				letter-spacing: 0.02em;
-				
-				margin: 0 auto;
 			}
 			
 			#bemutatkozas h1 {
@@ -3573,7 +3556,7 @@
 			}
 			
 			#bemutatkozas p {
-				padding: 2rem;
+				padding: 1rem 2rem;
 			}
 			
 			#uzenet_form {
@@ -3809,7 +3792,10 @@
 					<div class="szolgaltatasok_badge"></div>
 				</div>
 			</div>
+			
+			
 			<div id="szolgaltatasok2" class="" > 
+			
 				<div id="ign_takaritás_szolg_fooldal" class="szolgaltatasok_item jobb"> 
 					<div class="szolgDiszites">	
 						<img src="takaritas_Diszites2.png" alt="kép2" loading="lazy">
@@ -3849,18 +3835,19 @@
 		<div id="fenykepesToltes">
 		</div>
 		<article id="bemutatkozas" > 
-				
-				<h1 style="align-self:center; justify-self:center; text-align: center;"> Itt teljesebb képet kaphatsz rólunk</h1>
-				
-				<p>Az ST Managementnél az ingatlankezelés több mint szolgáltatás — stratégiai szemlélettel irányított értékteremtés. Teljes körű ingatlankezelési és tanácsadói megoldásainkkal tulajdonosokat és befektetőket támogatunk abban, hogy eszközeik megőrizzék stabilitásukat, növeljék teljesítményüket, és hosszú távon is kiemelkedő értéket képviseljenek.
-				</p>
-				<p>Munkánk alapja a személyre szabott gondolkodás és a precíz kivitelezés. Az ingatlantulajdonlás minden szakaszában szakértő iránymutatást nyújtunk — a tudatos befektetési döntésektől és strukturált vásárlásoktól kezdve a napi üzemeltetésen át egészen a fenntartható, mérhető értéknövelésig. Szolgáltatásaink magukban foglalják az átfogó ingatlankezelést, a professzionális üzemeltetést, a magas színvonalú karbantartást és felújításokat, valamint az egyedi vagyonkezelési tanácsadást.
-				</p>
-				<p>Az ST Management működését az átláthatóság, a részletek iránti kompromisszummentes figyelem és az eredményorientált szemlélet határozza meg. Ingatlanokat alakítunk át kiegyensúlyozottan működő, időtálló és jövedelmező befektetésekké — diszkréten, hatékonyan, következetesen. Legyen szó egyetlen prémium ingatlanról vagy komplex portfólió kezeléséről, ügyfeleink számára magabiztosságot, nyugalmat és kifinomult megoldásokat biztosítunk.
-				</p>
-				<p>Hisszük, hogy a valódi érték a hosszú távú partnerségekben rejlik. Tapasztalt csapatunk minden részletet felügyel a napi működéstől az eszközök stratégiai védelméig, biztosítva, hogy a ránk bízott ingatlanok a lehető legmagasabb színvonalon teljesítsenek — funkcionális, pénzügyi és esztétikai szempontból egyaránt.
-				</p>
-				
+				<div id="bem_1">
+					<h1 style="align-self:center; justify-self:center; text-align: center;"> Rólunk</h1>
+				</div>
+				<div id="bem_2">
+					<p>Az ST Managementnél az ingatlankezelés több mint szolgáltatás — stratégiai szemlélettel irányított értékteremtés. Teljes körű ingatlankezelési és tanácsadói megoldásainkkal tulajdonosokat és befektetőket támogatunk abban, hogy eszközeik megőrizzék stabilitásukat, növeljék teljesítményüket, és hosszú távon is kiemelkedő értéket képviseljenek.
+					</p>
+					<p>Munkánk alapja a személyre szabott gondolkodás és a precíz kivitelezés. Az ingatlantulajdonlás minden szakaszában szakértő iránymutatást nyújtunk — a tudatos befektetési döntésektől és strukturált vásárlásoktól kezdve a napi üzemeltetésen át egészen a fenntartható, mérhető értéknövelésig. Szolgáltatásaink magukban foglalják az átfogó ingatlankezelést, a professzionális üzemeltetést, a magas színvonalú karbantartást és felújításokat, valamint az egyedi vagyonkezelési tanácsadást.
+					</p>
+					<p>Az ST Management működését az átláthatóság, a részletek iránti kompromisszummentes figyelem és az eredményorientált szemlélet határozza meg. Ingatlanokat alakítunk át kiegyensúlyozottan működő, időtálló és jövedelmező befektetésekké — diszkréten, hatékonyan, következetesen. Legyen szó egyetlen prémium ingatlanról vagy komplex portfólió kezeléséről, ügyfeleink számára magabiztosságot, nyugalmat és kifinomult megoldásokat biztosítunk.
+					</p>
+					<p>Hisszük, hogy a valódi érték a hosszú távú partnerségekben rejlik. Tapasztalt csapatunk minden részletet felügyel a napi működéstől az eszközök stratégiai védelméig, biztosítva, hogy a ránk bízott ingatlanok a lehető legmagasabb színvonalon teljesítsenek — funkcionális, pénzügyi és esztétikai szempontból egyaránt.
+					</p>
+				</div>
 				
 		</article>
 		
